@@ -5,8 +5,7 @@
 
 (deftest to-bidi
   (testing "subroutes"
-    (is (=  ["" {true :not-found
-                 "/about-us" {"" :about-us
+    (is (=  ["" {"/about-us" {"" :about-us
                               "/our-team" {"" :about-us.our-team}}}]
            (sut/to-bidi [{:handler :about-us
                           :url "about-us"}
@@ -15,8 +14,7 @@
 
   (testing "composite handlers"
     (is (= [""
-            {true :not-found
-             "/products" {"" :products
+            {"/products" {"" :products
                           ["/" :id "/edit"] {"" :products.edit
                                              "/images" {"" :products.edit.images}}}}]
            (sut/to-bidi [{:handler :products

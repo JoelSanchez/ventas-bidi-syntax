@@ -60,5 +60,5 @@
   (let [routes (update-urls routes)
         indexed-urls (index-urls routes)]
     ["" (reduce (partial accumulate-route indexed-urls)
-                {true :not-found}
+                {}
                 routes)]))
