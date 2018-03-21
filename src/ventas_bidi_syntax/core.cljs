@@ -62,5 +62,3 @@
     ["" (reduce (partial accumulate-route indexed-urls)
                 {true :not-found}
                 routes)]))
-
-(to-bidi {:invalid true})
