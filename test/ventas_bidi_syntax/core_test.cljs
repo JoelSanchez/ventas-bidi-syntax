@@ -5,12 +5,21 @@
 
 (deftest to-bidi
   (testing "subroutes"
-    (is (=  ["" {"/about-us" {"" :about-us
-                              "/our-team" {"" :about-us.our-team}}}]
+    (is (= ["" {"/about-us" {"" :about-us
+                             "/our-team" {"" :about-us.our-team}
+                             "/company" {"" :about-us.company
+                                         "/london" {"" :about-us.company.london}}}
+                "/faq" {"" :faq}}]
            (sut/to-bidi [{:handler :about-us
                           :url "about-us"}
                          {:handler :about-us.our-team
-                          :url "our-team"}]))))
+                          :url "our-team"}
+                         {:handler :about-us.company
+                          :url "company"}
+                         {:handler :faq
+                          :url "faq"}
+                         {:handler :about-us.company.london
+                          :url "london"}]))))
 
   (testing "composite handlers"
     (is (= [""
