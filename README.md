@@ -1,5 +1,8 @@
 # ventas-bidi-syntax
 
+[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0)
+[![Clojars Project](https://img.shields.io/clojars/v/joelsanchez/ventas-bidi-syntax.svg)](https://clojars.org/joelsanchez/ventas-bidi-syntax)
+
 A nicer syntax for bidi, developed for [ventas](https://github.com/JoelSanchez/ventas)
 
 ## Overview
