@@ -21,8 +21,7 @@ Will result in:
 
 ```clojure
 [""
- {true :not-found,
-  "/admin" {"" :admin,
+ {"/admin" {"" :admin,
             "/products" {"" :admin.products,
                          ["/" :id "/edit"] {"" :admin.products.edit}}}}]
 ```
