@@ -1,4 +1,4 @@
-(defproject joelsanchez/ventas-bidi-syntax "0.1.3-SNAPSHOT"
+(defproject joelsanchez/ventas-bidi-syntax "0.1.3"
 
   :description "Human-optimized bidi routes"
 
