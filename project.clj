@@ -46,6 +46,11 @@
 
   :doo {:build "test"}
 
+  :repositories {"releases" {:url "https://repo.clojars.org"
+                             :creds :gpg}
+                 "snapshots" {:url "https://repo.clojars.org"
+                              :creds :gpg}}
+
   :profiles {:dev {:dependencies [[binaryage/devtools "0.9.9"]
                                   [figwheel-sidecar "0.5.15" :exclusions [org.clojure/tools.nrepl]]
                                   [com.cemerick/piggieback "0.2.2"]]
