@@ -21,12 +21,11 @@ Will result in:
 
 ```clojure
 [""
- {true :not-found,
-  "/admin" {"" :admin,
+ {"/admin" {"" :admin,
             "/products" {"" :admin.products,
                          ["/" :id "/edit"] {"" :admin.products.edit}}}}]
 ```
-As you can see, it nestes the routes by splitting `:handler` by the dots:
+As you can see, it nests the routes by splitting `:handler` by the dots:
 
 ```clojure
 (s/route-parents :admin.products.edit)
