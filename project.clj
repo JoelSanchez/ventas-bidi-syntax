@@ -4,14 +4,16 @@
 
   :url "https://github.com/JoelSanchez/ventas"
 
+  :pedantic? :abort
+
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   
   :min-lein-version "2.7.1"
 
-  :dependencies [[org.clojure/clojure "1.9.0"]
+  :dependencies [[org.clojure/clojure "1.9.0" :scope "provided"]
+                 [org.clojure/clojurescript "1.9.946" :scope "provided"]
                  [expound "0.4.0"]
-                 [org.clojure/clojurescript "1.9.946"]
                  [org.clojure/core.async  "0.4.474"]]
 
   :plugins [[lein-figwheel "0.5.15"]
@@ -45,7 +47,7 @@
   :doo {:build "test"}
 
   :profiles {:dev {:dependencies [[binaryage/devtools "0.9.9"]
-                                  [figwheel-sidecar "0.5.15"]
+                                  [figwheel-sidecar "0.5.15" :exclusions [org.clojure/tools.nrepl]]
                                   [com.cemerick/piggieback "0.2.2"]]
                    :plugins [[lein-doo "0.1.8" :exclusions [org.clojure/clojure]]]
                    :source-paths ["src" "dev"]
